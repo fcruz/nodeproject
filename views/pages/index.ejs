@@ -26,6 +26,7 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
 
   <% include ../partials/nav.ejs %>
 
+ 
 <div class="jumbotron text-center">
   <div class="container">
     <a href="/" class="lang-logo">
@@ -34,8 +35,8 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
     <h1>Getting Started with Awesome Project</h1>
     <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum tenetur maiores ad modi dolorem architecto eaque, labore, eos facilis repudiandae est vel quibusdam, sint qui. Aperiam pariatur voluptates doloremque aliquid!
     </p>
-    <a type="button" class="btn btn-lg btn-default" href="https://devcenter.heroku.com/articles/getting-started-with-nodejs"><span class="glyphicon glyphicon-flash"></span> Getting Started with Node</a>
-    <a type="button" class="btn btn-lg btn-primary" href="https://github.com/heroku/node-js-getting-started"><span class="glyphicon glyphicon-download"></span> Source on GitHub</a>
+    <h3><span class="label label-default" id="my_variant">Default</span></h3>
+     <a type="button" class="btn btn-lg btn-primary" href="https://github.com/heroku/node-js-getting-started"><span class="glyphicon glyphicon-download"></span> Source on GitHub</a>
   </div>
 </div>
 <div class="container">
@@ -79,6 +80,21 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
     Please do work through the Getting Started guide, even if you do know how to build such an application.  The guide covers the basics of working with Heroku, and will familiarize you with all the concepts you need in order to build and deploy your own apps.
   </div>
 </div>
+
+<script>
+  function implementExperimentA(value) {
+  if (value ==  '0') {
+    $('#my_variant').text('Hello from Original');
+  } else if (value == '1') {
+    $('#my_variant').text('Hello from variant 1');
+  } 
+}
+   
+gtag('event', 'optimize.callback', {
+    name: 'nxm0e-0DTw6MFC5rKK51Ng',
+    callback: implementExperimentA
+ });
+ </script>
 
 
 </body>
